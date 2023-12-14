@@ -6,11 +6,11 @@ The [5e_player_toolkit](https://github.com/jtabor214/5e_player_toolkit.git) is a
 
 ### Within the 5e Player Toolkit:
 
-    * Users are able to choose from a selection of topics on the Navigation Bar by clicking on the appropriate tab. In response, the application will fetch the relevant information from an API and will present the proper information regarding the topic chosen.
+* Users are able to choose from a selection of topics on the Navigation Bar by clicking on the appropriate tab. In response, the application will fetch the relevant information from an API and will present the proper information regarding the topic chosen.
 
-    * Tabs include: Races, Classes, Backgrounds, Feats, Equipment, Magic Items, and Spells
+* Tabs include: Races, Classes, Backgrounds, Feats, Equipment, Magic Items, and Spells
 
-    * Visual aspects that accompany certain information blocks
+* Visual aspects that accompany certain information blocks
 
 ## Wireframe: 
 
