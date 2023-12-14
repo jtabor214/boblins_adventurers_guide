@@ -20,7 +20,7 @@ The [5e_player_toolkit](https://github.com/jtabor214/5e_player_toolkit.git) is a
 
 ### All of the following technologies make up this project: 
 
-* The Dungeons and Dragons OpenAPI: https://github.com/5e-bits. 
+* The Dungeons and Dragons OpenAPI: https://www.dnd5eapi.co/docs/. 
 * Webpack to bundle and transpile the source JavaScript code.
 * npm to manage project dependencies.
 * HTML and CSS to structure and style the application.
