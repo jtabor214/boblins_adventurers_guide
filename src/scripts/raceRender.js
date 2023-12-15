@@ -1,11 +1,14 @@
+import { marked } from "marked";
+
 class RaceRender{
+  
   constructor(data) {
 		  this.data = data;
 		  this.populateRaceDOM(data);
   }
 
   populateRaceDOM(data){
-	  const raceList = document.getElementById('raceList');
+	  const raceList = document.getElementById('visualContainer');
     const list = document.createElement('ul');
 		// const raceData = Array.from(data)
 
@@ -18,25 +21,27 @@ class RaceRender{
       list.appendChild(raceEle);
     });
 
-		// raceList.innerHTML = '';
+		raceList.innerHTML = '';
     raceList.appendChild(list);
   };
 }
 
 const renderRaceDesc =  (ev, race) => {
-  const raceInfo = document.getElementById('raceInfo');
+  const raceInfo = document.getElementById('dataContainer');
   const list = document.createElement('ul');
-  const targetInfo = [race.desc, race.size_raw, race.size, race.traits, race.vision];
+  const targetInfo = [race.desc, race.size, race.traits, race.vision];
 
   // unecessary
   targetInfo.forEach(info => {
     const raceStats = document.createElement('li');
-    raceStats.textContent = info;
+    raceStats.innerHTML = marked.parse(info);
+
+    // markdown translation goes here
     list.appendChild(raceStats);
   });
   console.log(raceInfo);
 
-  // raceInfo.innerHTML = '';
+  raceInfo.innerHTML = '';
   raceInfo.appendChild(list);
 
 };
