@@ -6,12 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
-    <script src="./dist/main.js"></script>
-    <title>Project Name</title>
+    <script src="./dist/main.js" defer></script>
+    <title>Boblin's Adventurers Guide</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   </head>
 
   <body>
-    <div id="main"> </div>
+    <!-- <div id="main"> </div> -->
+    <div class="container">
+        <button id="race-tab" type="button">Races</button>
+        <button type="button">Classes</button>
+        <button type="button">Backgrounds</button>
+    </div>
+
+    <div id="raceList"> 
+        <div id="raceInfo"></div>
+    </div>
+
+
   </body>
 
 </html>
