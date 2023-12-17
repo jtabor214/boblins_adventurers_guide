@@ -1,0 +1,120 @@
+body {
+    background: url('/assets/forest_background.png');  
+    background-size: cover;
+}
+
+    .applicationContainer{
+
+        border: 1px solid purple;
+    }
+    
+    .informationContainer {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1250px;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid purple;
+        
+
+    }
+
+    .tab_container {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 250px;
+        border: 1px solid purple;
+        // border: 1px solid black
+
+    }
+
+    .tab_container > button{
+        cursor: url(/assets/sword_pointer.png), auto;    
+        font-family: monospace;
+    }
+
+    .tab_container > 
+    button:active,
+    button:focus{
+        background-color: darkgray;
+    }
+
+
+
+
+    .visualSection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: 620px;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin: 10px;
+        overflow: auto;
+        background-color: rgba(20, 82, 70, 0.8);
+        // filter: alpha(opacity=80);
+        // opacity: 0.8;
+    }
+
+
+    .raceNames > li{
+        // filter: alpha(opacity=100);
+        opacity: 1;
+        // color: aliceblue;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .raceNames{
+        display: grid;
+        // border: 1px solid black;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 70px;
+        list-style: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    .name{
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .dataSection{
+        width: 700px;
+        height: 660px;
+
+        border: 1px solid black;
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+        
+        
+        padding: 20px;
+        margin: 10px;
+        background-color: rgba(237, 196, 92, 0.8);
+        filter: alpha(opacity=80);
+        opacity: 0.8;
+        overflow: auto;
+    }
+
+
+
+    #title {
+        border: 1px solid purple;
+        width: 430px;
+        font-family: monospace;
+        text-align: center;
+        color: antiquewhite;
+        margin: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
