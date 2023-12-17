@@ -20,6 +20,10 @@ class RaceRender{
 				renderRaceDesc(ev, race);
 			});
       list.appendChild(raceEle);
+      // const icon = document.createElement('IMG');
+      // const propImg = 'bungie.net' + displayProperties.icon;
+      // icon.src = propImg;
+      // ul.appendChild(icon);
     });
 
 		raceList.innerHTML = '';
