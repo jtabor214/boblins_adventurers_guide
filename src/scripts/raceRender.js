@@ -10,10 +10,11 @@ class RaceRender{
   populateRaceDOM(data){
 	  const raceList = document.getElementById('visualContainer');
     const list = document.createElement('ul');
-		// const raceData = Array.from(data)
+		list.classList.add('raceNames');
 
     data.results.forEach(race => {
       const raceEle = document.createElement('li');
+      raceEle.classList.add('name');
       raceEle.textContent = race.name;
 			raceEle.addEventListener('click', ev => {
 				renderRaceDesc(ev, race);
@@ -33,7 +34,7 @@ const renderRaceDesc =  (ev, race) => {
 
   // unecessary
   targetInfo.forEach(info => {
-    const raceStats = document.createElement('li');
+    const raceStats = document.createElement('p');
     raceStats.innerHTML = marked.parse(info);
 
     // markdown translation goes here
