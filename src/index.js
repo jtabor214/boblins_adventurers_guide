@@ -1,6 +1,8 @@
 // const { default: Example } = require("./scripts/example");
 const { default: RaceRender} = require("./scripts/raceRender");
 const { default: ClassRender} = require("./scripts/classRender");
+const { default: BackgroundRender} = require("./scripts/backgroundRender");
+const { default: FeatRender} = require("./scripts/featRender");
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const main = document.getElementById("main");
@@ -43,22 +45,34 @@ const renderClassInfo = async () => {
 
 window.renderClassInfo = renderClassInfo;
 
+document.addEventListener("DOMContentLoaded", () => {
+  const backgroundsTab = document.getElementById("backgrounds-tab");
+  backgroundsTab.addEventListener('click', renderBackgroundInfo);
+});
+
 const renderBackgroundInfo = async () => {
   const response = await fetch ("https://api.open5e.com/backgrounds/?document__slug__in=a5e");
   if (response.ok) {
     const data = await response.json();
     console.log(data);
+    new BackgroundRender(data);
   }
 };
 
 window.renderBackgroundInfo =  renderBackgroundInfo;
 
-// const renderFeatInfo = async () => {
-//   const response = await fetch ("");
-//   if (response.ok) {
-//     const data = await response.json();
-//     console.log(data);
-//   }
-// };
+document.addEventListener("DOMContentLoaded", () => {
+  const featsTab = document.getElementById("feats-tab");
+  featsTab.addEventListener('click', renderFeatInfo);
+});
 
-// window.renderFeatInfo =  renderFeatInfo;
+const renderFeatInfo = async () => {
+  const response = await fetch ("https://api.open5e.com/v1/feats/");
+  if (response.ok) {
+    const data = await response.json();
+    console.log(data);
+    new FeatRender(data);
+  }
+};
+
+window.renderFeatInfo =  renderFeatInfo;

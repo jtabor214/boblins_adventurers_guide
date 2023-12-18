@@ -18,9 +18,11 @@ class ClassRender{
 			classEle.textContent = _class.name;
 			classEle.addEventListener('click', ev => {
 				renderClassDesc(ev, _class);
-			})
+			});
+
 			list.appendChild(classEle);
-		})
+		});
+
 		_classList.innerHTML = '';
 		_classList.appendChild(list);
 	};
