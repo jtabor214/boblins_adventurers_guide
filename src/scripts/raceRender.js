@@ -13,7 +13,7 @@ class RaceRender{
 		list.classList.add('raceNames');
 
     data.results.forEach(race => {
-      const raceEle = document.createElement('li');
+      const raceEle = document.createElement('button');
       raceEle.classList.add('name');
       raceEle.textContent = race.name;
 			raceEle.addEventListener('click', ev => {

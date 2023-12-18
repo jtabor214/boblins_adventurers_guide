@@ -13,7 +13,7 @@ class ClassRender{
 		list.classList.add('classTitles');
 
 		data.results.forEach(_class => {
-			const classEle = document.createElement('li');
+			const classEle = document.createElement('button');
 			classEle.classList.add('title');
 			classEle.textContent = _class.name;
 			classEle.addEventListener('click', ev => {
