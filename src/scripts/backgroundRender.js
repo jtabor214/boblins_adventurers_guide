@@ -4,10 +4,10 @@ class BackgroundRender{
 
   constructor(data) {
     this.data = data;
-	  this.populateClassDOM(data);
+	this.populateBackgroundDOM(data);
   }
 
-	populateClassDOM(data){
+	populateBackgroundDOM(data){
 		const backgroundList = document.getElementById('visualContainer');
 		const list = document.createElement('ul');
 		list.classList.add('backgroundTitles');

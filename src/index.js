@@ -3,6 +3,8 @@ const { default: RaceRender} = require("./scripts/raceRender");
 const { default: ClassRender} = require("./scripts/classRender");
 const { default: BackgroundRender} = require("./scripts/backgroundRender");
 const { default: FeatRender} = require("./scripts/featRender");
+const { default: WeaponRender} = require("./scripts/weaponsRender");
+const { default: MagicItemRender} = require("./scripts/magicItemRender");
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const main = document.getElementById("main");
@@ -76,3 +78,50 @@ const renderFeatInfo = async () => {
 };
 
 window.renderFeatInfo =  renderFeatInfo;
+
+document.addEventListener("DOMContentLoaded", () =>{
+  const weaponsTab = document.getElementById("weapons-tab");
+  weaponsTab.addEventListener('click', renderWeaponInfo);
+});
+
+const renderWeaponInfo = async () => {
+  const response = await fetch ("https://api.open5e.com/v1/weapons/?document__slug__not_in=toh");
+  if (response.ok) {
+    const data = await response.json();
+    console.log(data);
+    new WeaponRender(data);
+  }
+};
+
+window.renderWeaponInfo = renderWeaponInfo;
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const armorTab = document.getElementById("armor-tab");
+//   armorTab.addEventListener('click', renderArmorInfo);
+// });
+
+// const renderArmorInfo = async () => {
+//   const response = await fetch ("https://api.open5e.com/v1/armor/");
+//   if (response.ok) {
+//     const data = await response.json();
+//     console.log(data);
+//     new ArmorRender(data);
+//   }
+// };
+
+// window.renderArmorInfo = renderArmorInfo;
+
+document.addEventListener("DOMContentLoaded", () =>{
+  const magicItemsTab = document.getElementById("magic-items-tab");
+  magicItemsTab.addEventListener('click', renderItemInfo);
+});
+
+const renderItemInfo = async () => {
+  const response = await fetch ("https://api.open5e.com/v1/magicitems/?document__slug__in=wotc-srd&ordering=rarity");
+  if (response.ok) {
+    const data = await response.json();
+    console.log(data);
+    new MagicItemRender(data);
+  }
+};
+

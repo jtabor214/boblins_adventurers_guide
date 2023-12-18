@@ -4,10 +4,10 @@ class FeatRender{
 
   constructor(data) {
     this.data = data;
-	  this.populateClassDOM(data);
+	  this.populateFeatDOM(data);
   }
 
-  populateClassDOM(data){
+  populateFeatDOM(data){
     const featList = document.getElementById('visualContainer');
     const list = document.createElement('ul');
     list.classList.add('featTitles');

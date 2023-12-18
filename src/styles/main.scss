@@ -24,18 +24,18 @@ body {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        width: 330px;
+        width: 550px;
         border: 1px solid purple;
         // border: 1px solid black
 
     }
 
-    .tab_container > button{
+    button{
         cursor: url(/assets/sword_pointer.png), auto;    
         font-family: monospace;
     }
 
-    .tab_container > 
+    .tab_container 
         button:active,
         button:focus{
             background-color: darkgray;
@@ -158,4 +158,33 @@ body {
         opacity: 1;
         background-color: rgba(255, 255, 255, 1);
     }
-    
+
+    .weaponNames{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        list-style: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    .weaponNames > li{
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .itemNames{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        list-style: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    .itemNames > li {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+
