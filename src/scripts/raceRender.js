@@ -51,7 +51,4 @@ const renderRaceDesc =  (ev, race) => {
 
 };
 
-
-
-
 export default RaceRender;
