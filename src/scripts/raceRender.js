@@ -7,18 +7,6 @@ class RaceRender{
   constructor(data) {
 		  this.data = data;
 		  this.populateRaceDOM(data);
-      // this.image = new Image();
-      // this.images = ['../../assets/characters/dragonborn.png',
-      //  '../../assets/characters/dwarf.png',
-      //  '../../assets/characters/elf.png',
-      //  '../../assets/characters/halfling.png', 
-      //  '../../assets/characters/human.png',
-      //  '../../assets/characters/dragonborn.png', 
-      //  '../../assets/characters/gnome.png', 
-      //  '../../assets/characters/halfelf.png', 
-      //  '../../assets/characters/halforc.png', 
-      //  '../../assets/characters/tiefling.png'];
-
   }
 
   populateRaceDOM(data){
@@ -27,15 +15,23 @@ class RaceRender{
 		list.classList.add('raceNames');
 
     data.results.forEach(race => {
-      console.log(this);
+      
+      const raceDiv = document.createElement('div');
       const raceEle = document.createElement('button');
       raceEle.classList.add('name');
       raceEle.textContent = race.name;
 
+      const image = document.createElement('img');
+      image.classList.add("race-image");
+      image.src = `../../assets/characters/${race.name}.png`;
+
+      raceDiv.appendChild(image);
+      raceDiv.appendChild(raceEle);
+
 			raceEle.addEventListener('click', ev => {
 				renderRaceDesc(ev, race);
 			});
-      list.appendChild(raceEle);
+      list.appendChild(raceDiv);
     
     });
 

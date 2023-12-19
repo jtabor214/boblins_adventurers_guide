@@ -43,10 +43,7 @@ button {
   position: absolute;
   top: 10px;
   right: 20px;
-  border: 1px solid white;
-  border-radius: 30px;
   width: fit-content;
-  background-color: aliceblue;
   text-align: center;
 }
 
@@ -66,9 +63,15 @@ button:focus {
   overflow: auto;
 }
 
+#visualContainer {
+  height: 600px;
+  width: 400px;
+}
+
 .dataSection {
   width: 500px;
   height: 660px;
+  margin-top: 30px;
   border-radius: 10px;
   box-sizing: border-box;
   overflow: auto;
@@ -87,48 +90,27 @@ button:focus {
 .raceNames {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 70px;
+  gap: 60px;
   list-style: none;
   text-align: center;
   padding: 0;
 }
 
-.raceNames > li {
-  opacity: 1;
-  background-color: #b38a5c;
+.raceNames > div {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.name {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 0;
-  background-color: #ceb795;
+.race-image {
+  width: 150px;
+  height: auto;
 }
 
 .classTitles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 70px;
-  list-style: none;
-  text-align: center;
-  padding: 0;
-}
-
-.classTitles > li {
-  opacity: 1;
-  background-color: #b38a5c 255, 255, 255, 1;
-}
-
-.title {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 0;
-  background-color: #ceb795;
-}
-
-.backgroundTitles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
@@ -137,9 +119,13 @@ button:focus {
   padding: 0;
 }
 
-.backgroundTitles > li {
-  opacity: 1;
-  background-color: rgb(255, 255, 255);
+.backgroundTitles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  list-style: none;
+  text-align: center;
+  padding: 0;
 }
 
 .featTitles {
@@ -151,11 +137,6 @@ button:focus {
   padding: 0;
 }
 
-.featTitles > li {
-  opacity: 1;
-  background-color: rgb(255, 255, 255);
-}
-
 .weaponNames {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -165,21 +146,27 @@ button:focus {
   padding: 0;
 }
 
-.weaponNames > li {
-  opacity: 1;
-  background-color: rgb(255, 255, 255);
-}
-
 .itemNames {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 5px;
   list-style: none;
   text-align: center;
   padding: 0;
 }
 
-.itemNames > li {
-  opacity: 1;
-  background-color: rgb(255, 255, 255);
+.name {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  background-color: #ceb795;
+}
+
+.title {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  background-color: #ceb795;
 }
