@@ -13,18 +13,38 @@
 
   <body>
     
+    <audio id="music" autoplay volume="0.5">
+      <source src="./assets/audio/app_music.mp3" type="audio/mp3"> 
+      Your browser does not support the audio tag
+    </audio>
+
+   <audio id="click-sound">
+      <source src="./assets/audio/page_flip.mp3" type="audio/mp3">
+   </audio>
+
+   <script>
+    function playSound() {
+      const soundEffect = document.getElementById("click-sound");
+      soundEffect.play();
+    }
+    </script>
+
     <div class="applicationContainer">
+      <p id="audio-button">
+        <img id="speakerIcon" src="./assets/speaker_icon.ico" alt="Speaker Icon">
+      </p>
 
     <h1 id="title">Boblin's Adventurers Guide</h1>
+    
 
         <div class="tab_container">
-            <button id="race-tab" type="button">Races</button>
-            <button id="class-tab" type="button">Classes</button>
-            <button id="backgrounds-tab" type="button">Backgrounds</button>
-            <button id="feats-tab" type="button">Feats</button>
-            <button id="weapons-tab" type="button">Weapons</button>
+            <button id="race-tab" type="button" onclick="playSound()">Races</button>
+            <button id="class-tab" type="button" onclick="playSound()">Classes</button>
+            <button id="backgrounds-tab" type="button" onclick="playSound()">Backgrounds</button>
+            <button id="feats-tab" type="button" onclick="playSound()">Feats</button>
+            <button id="weapons-tab" type="button" onclick="playSound()">Weapons</button>
             <!-- <button id="armor-tab" type="button">Armor</button> -->
-            <button id="magic-items-tab" type="button">Magic Items</button>
+            <button id="magic-items-tab" type="button" onclick="playSound()">Magic Items</button>
         </div>
 
         <div class="informationContainer">
