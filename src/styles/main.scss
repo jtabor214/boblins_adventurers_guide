@@ -4,11 +4,18 @@ body {
 }
 
     .applicationContainer{
+        width: auto;
+        height: auto;
 
-        border: 1px solid purple;
+        // border: 1px solid purple;
     }
     
     .informationContainer {
+        border-radius: 20px;
+        background-image: url(/assets/book.png);
+        background-size: cover;
+        
+        background-position: center;
         margin-left: auto;
         margin-right: auto;
         display: flex;
@@ -17,15 +24,17 @@ body {
         width: 1250px;
         display: flex;
         flex-direction: row;
-        border: 1px solid purple;
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+        // border: 1px solid purple;
     }
 
     .tab_container {
-        margin-left: auto;
+        margin-left: 80px;
         margin-right: auto;
         text-align: center;
         width: 550px;
-        border: 1px solid purple;
+        padding: 5px;
+        // border: 1px solid purple;
         // border: 1px solid black
 
     }
@@ -33,6 +42,24 @@ body {
     button{
         cursor: url(/assets/sword_pointer.png), auto;    
         font-family: monospace;
+        
+    }
+
+    // #modal_button{
+    //     position: absolute;
+    //     top: 10px;
+    //     right: 20px;
+    // }
+
+    #audio-button{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        border: 1px solid white;
+        border-radius: 30px;
+        width: fit-content;
+        background-color: aliceblue;
+        text-align: center;
     }
 
     .tab_container 
@@ -47,48 +74,51 @@ body {
         align-items: center;
         width: 600px;
         height: 620px;
-        border: 1px solid black;
+        // border: 1px solid black;
         border-radius: 10px;
-        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-        padding: 20px;
-        margin: 10px;
+        // box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        // margin: ;
         overflow: auto;
-        background-color: rgba(20, 82, 70, 0.8);
+        // background-color: rgba(20, 82, 70, 0.8);
     }
 
     .dataSection{
-        width: 700px;
+        width: 500px;
         height: 660px;
 
-        border: 1px solid black;
+        // border: 1px solid black;
         border-radius: 10px;
         box-sizing: border-box;
-        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+        // box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
         
         
-        padding: 20px;
-        margin: 10px;
-        background-color: rgba(237, 196, 92, 0.8);
-        filter: alpha(opacity=80);
-        opacity: 0.8;
+        // padding: 20px;
+        // margin: 10px;
+        // background-color: rgba(237, 196, 92, 0.8);
+        // filter: alpha(opacity=80);
+        // opacity: 0.8;
         overflow: auto;
     }
 
     #title {
-        border: 1px solid purple;
+        // border: 1px solid purple;
+        // background-image: url(/assets/banner.png);
+        background-size: cover;
         width: 430px;
         font-family: monospace;
         text-align: center;
         color: antiquewhite;
-        margin: 20px;
-        margin-left: auto;
+        // margin: 20px;
+        margin-left: 105px;
         margin-right: auto;
+        
     }
 
     .raceNames{
         display: grid;
         // border: 1px solid black;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 70px;
         list-style: none;
         text-align: center;
@@ -97,7 +127,7 @@ body {
 
     .raceNames > li{
         opacity: 1;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: #b38a5c;
     }
 
     .name{
@@ -105,6 +135,7 @@ body {
         border-radius: 10px;
         padding: 10px;
         margin: 0;
+        background-color: #ceb795;
     }
 
     .classTitles{
@@ -119,7 +150,7 @@ body {
 
     .classTitles > li{
         opacity: 1;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: #b38a5c(255, 255, 255, 1);
     }
 
     .title{
@@ -127,12 +158,13 @@ body {
         border-radius: 10px;
         padding: 10px;
         margin: 0;
+        background-color: #ceb795;
     }
 
     .backgroundTitles{
         display: grid;
         // border: 1px solid black;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 50px;
         list-style: none;
         text-align: center;
@@ -145,9 +177,9 @@ body {
     }
 
     .featTitles {
-        // display: grid;
+        display: grid;
         // border: 1px solid black;
-        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         list-style: none;
         text-align: center;

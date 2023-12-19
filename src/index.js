@@ -15,6 +15,27 @@ const { default: MagicItemRender} = require("./scripts/magicItemRender");
 //   const raceName = document.getElementById("race")
 // })
 
+const backgroundMusic = document.getElementById("music");
+backgroundMusic.volume = 0.2;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const audioEle = document.getElementById('music');
+  const audioButton = document.getElementById('audio-button');
+  const speakerIcon = document.getElementById('speakerIcon');
+
+  audioButton.addEventListener('click', () => {
+    if (audioEle.paused) {
+      audioEle.play();
+      speakerIcon.src = "/assets/speaker_icon.ico";
+    } else {
+      audioEle.pause();
+      speakerIcon.src = "/assets/muted_speaker_icon.ico";
+    }
+  });
+});
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
 	 const raceTab = document.getElementById("race-tab");
    raceTab.addEventListener('click', renderRaceInfo);
