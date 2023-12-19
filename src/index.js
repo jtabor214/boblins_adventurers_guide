@@ -6,6 +6,7 @@ const { default: FeatRender} = require("./scripts/featRender");
 const { default: WeaponRender} = require("./scripts/weaponsRender");
 const { default: MagicItemRender} = require("./scripts/magicItemRender");
 
+
 // document.addEventListener("DOMContentLoaded", () => {
 //   const main = document.getElementById("main");
 //   new Example(main);

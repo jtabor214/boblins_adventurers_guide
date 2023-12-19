@@ -1,3 +1,9 @@
+@font-face {
+    font-family: customFont;
+    src: url(/assets/fonts/DiaryOfAn8BitMage-lYDD.ttf);
+   }
+  
+
 body {
     background: url('/assets/forest_background.png');  
     background-size: cover;
@@ -30,10 +36,10 @@ body {
     }
 
     .tab_container {
-        margin-left: 80px;
+        margin-left: 100px;
         margin-right: auto;
         text-align: center;
-        width: 550px;
+        width: 570px;
         padding: 5px;
         // border: 1px solid purple;
         // border: 1px solid black
@@ -42,7 +48,7 @@ body {
 
     button{
         cursor: url(/assets/sword_pointer.png), auto;    
-        font-family: monospace;
+        font-family: customFont;
         
     }
 
@@ -92,12 +98,13 @@ body {
     
     .dataSection{
         width: 500px;
-        height: 660px;
-        margin-top: 30px;
+        height: 630px;
+        margin-top: 10px;
         // border: 1px solid black;
         border-radius: 10px;
         box-sizing: border-box;
         // box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+        font-family: customFont;
         
         
         // padding: 20px;
@@ -112,21 +119,25 @@ body {
         // border: 1px solid purple;
         // background-image: url(/assets/banner.png);
         background-size: cover;
-        width: 430px;
-        font-family: monospace;
+        width: 500px;
+        font-family: customFont;
         text-align: center;
         color: antiquewhite;
-        // margin: 20px;
+        margin-top: 25px;
+        margin-bottom: 0px;
         margin-left: 105px;
         margin-right: auto;
         
     }
     
     .raceNames{
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         
         // border: 1px solid black;
-        grid-template-columns: repeat(2, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
         gap: 60px;
         list-style: none;
         text-align: center;
@@ -134,7 +145,7 @@ body {
     }
     
     .raceNames > div {
-        height: 100px;
+        height: 300px;
         width: 100px;
         display: flex;
         justify-content: center;
@@ -142,7 +153,7 @@ body {
         flex-direction: column;
     }
     .race-image{
-        width: 150px;
+        width: 300px;
         height: auto;
     }
     
