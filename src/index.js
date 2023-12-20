@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       speakerIcon.src = "/assets/speaker_icon.ico";
     } else {
       audioEle.pause();
-      speakerIcon.src = "/assets/muted_speaker_icon.ico";
+      speakerIcon.src = "./assets/muted_speaker_icon.ico";
     }
   });
 });

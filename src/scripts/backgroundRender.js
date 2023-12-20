@@ -20,7 +20,7 @@ class BackgroundRender{
 
 			const image = document.createElement('img');
 			image.classList.add("background-image");
-			image.src = `../../assets/background_icons/${background.name}.png`;
+			image.src = `./assets/background_icons/${background.name}.png`;
 
 			backgroundDiv.appendChild(image);
 			backgroundDiv.appendChild(backgroundEle);

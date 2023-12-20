@@ -21,7 +21,7 @@ class ClassRender{
 
 			const image = document.createElement('img');
 			image.classList.add("class-image");
-			image.src = `../../assets/class_icons/${_class.name}.png`;
+			image.src = `./assets/class_icons/${_class.name}.png`;
 
 			classDiv.appendChild(image);
 			classDiv.appendChild(classEle);
