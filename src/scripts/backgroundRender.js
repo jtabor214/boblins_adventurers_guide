@@ -13,14 +13,24 @@ class BackgroundRender{
 		list.classList.add('backgroundTitles');
 
 		data.results.forEach(background => {
+			const backgroundDiv = document.createElement('div');
 			const backgroundEle = document.createElement('button');
 			backgroundEle.classList.add('title');
 			backgroundEle.textContent = background.name;
+
+			const image = document.createElement('img');
+			image.classList.add("background-image");
+			image.src = `../../assets/background_icons/${background.name}.png`;
+
+			backgroundDiv.appendChild(image);
+			backgroundDiv.appendChild(backgroundEle);
+			
+
 			backgroundEle.addEventListener('click', ev => {
 				renderBackgroundDesc(ev, background);
 			});
 
-			list.appendChild(backgroundEle);
+			list.appendChild(backgroundDiv);
 		});
 
 		backgroundList.innerHTML = '';

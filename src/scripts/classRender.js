@@ -13,14 +13,24 @@ class ClassRender{
 		list.classList.add('classTitles');
 
 		data.results.forEach(_class => {
+
+			const classDiv = document.createElement('div');
 			const classEle = document.createElement('button');
 			classEle.classList.add('title');
 			classEle.textContent = _class.name;
+
+			const image = document.createElement('img');
+			image.classList.add("class-image");
+			image.src = `../../assets/class_icons/${_class.name}.png`;
+
+			classDiv.appendChild(image);
+			classDiv.appendChild(classEle);
+
 			classEle.addEventListener('click', ev => {
 				renderClassDesc(ev, _class);
 			});
+			list.appendChild(classDiv);
 
-			list.appendChild(classEle);
 		});
 
 		_classList.innerHTML = '';
