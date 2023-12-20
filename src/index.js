@@ -25,9 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const speakerIcon = document.getElementById('speakerIcon');
 
   audioButton.addEventListener('click', () => {
-
-    audioEle.play();
-
     if (audioEle.paused) {
       audioEle.play();
       speakerIcon.src = "/assets/speaker_icon.ico";
