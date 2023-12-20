@@ -1,6 +1,6 @@
 import { marked } from "marked";
+import dwarf from "../../assets/characters/Dwarf.png";
 
-// import dragonborn from '../../assets/characters/dragonborn.png';
 
 class RaceRender{
   
@@ -23,7 +23,8 @@ class RaceRender{
 
       const image = document.createElement('img');
       image.classList.add("race-image");
-      image.src = `../assets/characters/${race.name}.png`;
+      // image.src = `../assets/characters/${race.name}.png`;
+      image.src = dwarf;
 
       raceDiv.appendChild(image);
       raceDiv.appendChild(raceEle);
