@@ -35,6 +35,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const openModal = document.getElementById('modal-tab');
+  const closeModal = document.getElementById('close-modal-button');
+  const modalEle = document.getElementById("message");
+
+  modalEle.style.display = 'flex';
+
+  openModal.addEventListener('click', () => {
+    console.log("opening");
+    modalEle.style.display = 'flex';
+  });
+
+  closeModal.addEventListener('click', () =>{
+    modalEle.style.display = 'none';
+  });
+
+  window.addEventListener('click', (ev) => {
+    if (ev.target !== openModal) {
+      modalEle.style.display = 'none';
+    }
+  });
+});
+
 
 
 document.addEventListener("DOMContentLoaded", () => {

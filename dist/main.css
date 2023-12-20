@@ -43,6 +43,31 @@ button {
   font-family: customFont;
 }
 
+#message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-left: 250px;
+  margin-top: 100px;
+  width: 420px;
+  height: 600px;
+  font-family: customFont;
+  line-height: 2;
+  text-align: center;
+}
+
+#message > h1 {
+  margin: 0;
+}
+
+#close-modal-button {
+  background-color: #ceb795;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 #audio-button {
   position: absolute;
   top: 10px;
@@ -61,7 +86,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   width: 600px;
-  height: 620px;
+  height: 590px;
   border-radius: 10px;
   padding: 10px;
   overflow: auto;
@@ -79,6 +104,7 @@ button:focus {
   border-radius: 10px;
   box-sizing: border-box;
   font-family: customFont;
+  line-height: 1.5;
   overflow: auto;
 }
 
@@ -102,7 +128,6 @@ button:focus {
   gap: 60px;
   list-style: none;
   text-align: center;
-  padding: 0;
 }
 
 .raceNames > div {
@@ -121,7 +146,8 @@ button:focus {
 
 .classTitles {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  margin-top: 60px;
+  grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   list-style: none;
   text-align: center;
@@ -130,7 +156,7 @@ button:focus {
 
 .backgroundTitles {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   list-style: none;
   text-align: center;
