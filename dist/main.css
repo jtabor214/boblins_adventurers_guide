@@ -206,12 +206,26 @@ ul > button:focus {
 
 .classTitles {
   display: grid;
-  margin-top: 60px;
+  margin-top: 20px;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   list-style: none;
   text-align: center;
-  padding: 0;
+}
+
+.classTitles > div {
+  height: 50px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.class-image {
+  width: 50px;
+  height: auto;
 }
 
 .backgroundTitles {
