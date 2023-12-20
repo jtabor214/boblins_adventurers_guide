@@ -3,15 +3,15 @@
   \*************************************************************************************************************************************/
 @font-face {
   font-family: customFont;
-  src: url(/assets/fonts/DiaryOfAn8BitMage-lYDD.ttf);
+  src: url("../assets/fonts/DiaryOfAn8BitMage-lYDD.ttf");
 }
 body {
-  background: url("/assets/forest_background.png");
+  background: url("../assets/forest_background.png");
   background-size: cover;
 }
 
 button {
-  cursor: url(/assets/sword_pointer.png), auto;
+  cursor: url("../assets/sword_pointer.png"), auto;
   font-family: customFont;
 }
 
@@ -48,7 +48,7 @@ ul > button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/assets/banner.png);
+  background-image: url("../assets/banner.png");
   background-size: auto;
   background-position: center;
   margin-left: auto;
@@ -113,7 +113,7 @@ ul > button:focus {
 
 .informationContainer {
   border-radius: 20px;
-  background-image: url(/assets/book.png);
+  background-image: url("../assets/book.png");
   background-size: cover;
   background-position: center;
   margin-left: auto;
