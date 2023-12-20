@@ -231,10 +231,25 @@ ul > button:focus {
 .backgroundTitles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 30px;
   list-style: none;
   text-align: center;
   padding: 0;
+}
+
+.backgroundTitles > div {
+  height: 70px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.background-image {
+  width: 40px;
+  height: auto;
 }
 
 .featTitles {
