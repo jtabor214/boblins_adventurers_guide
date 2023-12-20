@@ -23,7 +23,7 @@ class RaceRender{
 
       const image = document.createElement('img');
       image.classList.add("race-image");
-      image.src = `../../assets/characters/${race.name}.png`;
+      image.src = `../assets/characters/${race.name}.png`;
 
       raceDiv.appendChild(image);
       raceDiv.appendChild(raceEle);
