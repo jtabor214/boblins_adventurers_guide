@@ -16,8 +16,8 @@ const { default: MagicItemRender} = require("./scripts/magicItemRender");
 //   const raceName = document.getElementById("race")
 // })
 
-const backgroundMusic = document.getElementById("music");
-backgroundMusic.volume = 0.2;
+// const backgroundMusic = document.getElementById("music");
+// backgroundMusic.volume = 0.2;
 
 document.addEventListener("DOMContentLoaded", () => {
   const audioEle = document.getElementById('music');
