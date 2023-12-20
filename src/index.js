@@ -69,7 +69,7 @@ const renderRaceInfo = async () => {
   const response = await fetch ("https://api.open5e.com/races/?document__slug__not_in=toh");
   if (response.ok) {
     const data = await response.json();
-    console.log(data);
+
     new RaceRender(data);
   }
 };
@@ -85,7 +85,7 @@ const renderClassInfo = async () => {
   const response = await fetch ("https://api.open5e.com/classes/");
   if (response.ok) {
     const data = await response.json();
-    console.log(data);
+
     new ClassRender(data);
   }
 };
@@ -101,7 +101,7 @@ const renderBackgroundInfo = async () => {
   const response = await fetch ("https://api.open5e.com/backgrounds/?document__slug__in=a5e");
   if (response.ok) {
     const data = await response.json();
-    console.log(data);
+
     new BackgroundRender(data);
   }
 };
@@ -117,7 +117,7 @@ const renderFeatInfo = async () => {
   const response = await fetch ("https://api.open5e.com/v1/feats/");
   if (response.ok) {
     const data = await response.json();
-    console.log(data);
+
     new FeatRender(data);
   }
 };

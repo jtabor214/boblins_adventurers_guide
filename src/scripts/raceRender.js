@@ -24,7 +24,6 @@ class RaceRender{
       const image = document.createElement('img');
       image.classList.add("race-image");
       image.src = `./assets/characters/${race.name.replace(/-/g, '').toLowerCase()}.png`;
-      // image.src = dwarf;
 
       raceDiv.appendChild(image);
       raceDiv.appendChild(raceEle);
@@ -38,7 +37,6 @@ class RaceRender{
 
 		raceList.innerHTML = '';
     raceList.appendChild(list);
-    
   };
 }
 
