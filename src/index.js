@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
   modalEle.style.display = 'flex';
 
   openModal.addEventListener('click', () => {
-    console.log("opening");
-    modalEle.style.display = 'flex';
+    window.location.reload();
+    // modalEle.style.display = 'flex';
   });
 
   closeModal.addEventListener('click', () =>{
