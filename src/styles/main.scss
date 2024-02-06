@@ -7,6 +7,7 @@
 body {
     background: url('../assets/forest_background.png');  
     background-size: cover;
+    overflow: hidden;
 }
 
 button{
@@ -138,13 +139,8 @@ ul > button:focus{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: fixed;
-        margin-left: 250px;
-        margin-top: 140px;
-        
         width: 420px;
         height: 600px;
-        
         font-family: customFont;
         color: rgb(72,23,14);
         line-height: 2.0;
@@ -181,8 +177,10 @@ ul > button:focus{
     }
     
     #visualContainer{
-        height: 600px;
-        width: 400px;
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
     }
     
     
