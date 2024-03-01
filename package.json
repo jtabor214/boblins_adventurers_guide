@@ -1,7 +1,7 @@
 {
-  "name": "5e-player-toolkit",
+  "name": "boblins-adventurers-guide",
   "version": "1.0.0",
-  "description": "The [5e_player_toolkit](https://github.com/jtabor214/5e_player_toolkit.git) is a data visualization containing information on the rules and statistics for the 5th edition of Dungeons & Dragons by Wizards of the Coast. This toolkit is designed to provide players with quick access to all relevant information found within the multiple modules spanning D&D's vast library. This includes information on topic such as playable Races and Classes, Background and Feat choices, Weapons and Armor, Magic Items, and more. The 5e Player Toolkit is designed to be intuative for all players, regardless of experience, by displaying the information in organized tabs leading to easy-to-digest snippets of information. The intentional organization of information on the application also follows the natural progression a player takes when designing a character.",
+  "description": "[Boblin's Adventurers Guide](https://github.com/jtabor214/boblins_adventurers_guide.git) is a data visualization containing information on the rules and statistics for the 5th edition of Dungeons & Dragons by Wizards of the Coast. This toolkit is designed to provide players with quick access to all relevant information found within the multiple modules spanning D&D's vast library. This includes information on topic such as playable Races and Classes, Background and Feat choices, Weapons and Armor, Magic Items, and more. The 5e Player Toolkit is designed to be intuative for all players, regardless of experience, by displaying the information in organized tabs leading to easy-to-digest snippets of information. The intentional organization of information on the application also follows the natural progression a player takes when designing a character.",
   "main": "index.js",
   "browserslist": [
     "defaults"

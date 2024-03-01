@@ -8,6 +8,7 @@
 body {
   background: url("../assets/forest_background.png");
   background-size: cover;
+  overflow: hidden;
 }
 
 button {
@@ -112,6 +113,7 @@ ul > button:focus {
 }
 
 .informationContainer {
+  border: 2px solid purple;
   border-radius: 20px;
   background-image: url("../assets/book.png");
   background-size: cover;
@@ -127,14 +129,12 @@ ul > button:focus {
 }
 
 #message {
+  border: 2px solid purple;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  margin-left: 250px;
-  margin-top: 140px;
-  width: 420px;
+  width: 410px;
   height: 600px;
   font-family: customFont;
   color: rgb(72, 23, 14);
@@ -153,10 +153,11 @@ ul > button:focus {
 }
 
 .visualSection {
+  border: 2px solid blue;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
+  width: 500px;
   height: 590px;
   border-radius: 10px;
   padding: 10px;
@@ -164,8 +165,9 @@ ul > button:focus {
 }
 
 #visualContainer {
-  height: 600px;
-  width: 400px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
 }
 
 .dataSection {
