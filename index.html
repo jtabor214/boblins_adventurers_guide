@@ -7,13 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js" defer></script>
+    <script
+    src="https://kit.fontawesome.com/163d90ec77.js"
+    crossorigin="anonymous"
+    ></script>
     <title>Boblin's Adventurers Guide</title>
     <link rel="icon" type="image/x-icon" href="./assets/boblin.ico">
   </head>
 
   <body>
     
-    <audio id="music" autoplay>
+    <audio id="music">
       <source src="./assets/audio/app_music.mp3" type="audio/mp3"> 
       Your browser does not support the audio tag
     </audio>
@@ -30,67 +34,63 @@
     </script>
 
 
-<div class="applicationContainer">
-  
-  <div class="periphery-buttons">
+  <div class="applicationContainer">
     
-    <p id="audio-button">
-      <img id="speakerIcon" src="./assets/speaker_icon.ico" alt="Speaker Icon">
-    </p>
-    
-    <a href="https://github.com/jtabor214" target="_blank" id="github-button">
-      <img src="./assets/github.ico" alt="Github Logo">
-    </a>
-    
-  </div>
-  
-  <div id="titleContainer">
-    <h1 id="title">Boblin's Adventurer's Guide</h1>
-  </div>
-  
-  <div class="tabContainer">
-    <button id="race-tab" type="button" onclick="playSound()">Races</button>
-    <button id="class-tab" type="button" onclick="playSound()">Classes</button>
-    <button id="backgrounds-tab" type="button" onclick="playSound()">Backgrounds</button>
-    <button id="feats-tab" type="button" onclick="playSound()">Feats</button>
-    <!-- <button id="weapons-tab" type="button" onclick="playSound()">Weapons</button> -->
-    <!-- <button id="magic-items-tab" type="button" onclick="playSound()">Magic Items</button> -->
-    <button id="modal-tab" type="button" onclick="playSound()">What's This?</button>
-  </div>
-  
-  
-  <div class="informationContainer">
-    
-    <div class="visualSection">
-            <div id="visualContainer">
-              <div class="modal_container">
-                  <div id="message">
-                
-                    <h1>What's This?</h1>
-                
-                    <p>Walking along the river bank, you notice a dilapidated old journal lying on the ground 
-                      just off the main path. You pick it up and notice that it is a random collection of 
-                      papers and handwritten notes, all of which seem to make up, “Boblin’s Adventurer's Guide.” 
-                      Between the half-rotten leather covers you see that it’s full of information about the different 
-                      kinds of beings that make up Faerun. Surely, there is something of value hidden inside 
-                      this amalgamation of pages… </p>
-                
-                    <p>Click on the bookmarks above to browse the different categories!</p>
-                
-                      <button id="close-modal-button">&times;</button>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <div class="dataSection">
-              <div id="dataContainer"></div>
-          </div>
-
-      </div>
-
+    <div class="periphery-buttons">
+      <a href="https://github.com/jtabor214" target="_blank" id="github-button">
+        <img src="./assets/github.ico" alt="Github Logo">
+      </a>
+      <p id="audio-button">
+        <i id="speaker-icon"class="fa-solid fa-play"></i>
+      </p>
     </div>
     
+    <div id="titleContainer">
+      <h1 id="title">Boblin's Adventurer's Guide</h1>
+    </div>
+    
+    <div class="interactive-container">
+    <div class="tabContainer">
+      <button id="race-tab" type="button" onclick="playSound()">Races</button>
+      <button id="class-tab" type="button" onclick="playSound()">Classes</button>
+      <button id="backgrounds-tab" type="button" onclick="playSound()">Backgrounds</button>
+      <button id="feats-tab" type="button" onclick="playSound()">Feats</button>
+      <!-- <button id="weapons-tab" type="button" onclick="playSound()">Weapons</button> -->
+      <!-- <button id="magic-items-tab" type="button" onclick="playSound()">Magic Items</button> -->
+      <button id="modal-tab" type="button" onclick="playSound()">What's This?</button>
+    </div>
+    
+    <div class="informationContainer">
+      
+      <div class="visualSection">
+              <div id="visualContainer">
+                <div class="modal_container">
+                    <div id="message">
+                  
+                      <h1>What's This?</h1>
+                  
+                      <p>Walking along the river bank, you notice a dilapidated old journal lying on the ground 
+                        just off the main path. You pick it up and notice that it is a random collection of 
+                        papers and handwritten notes, all of which seem to make up, “Boblin’s Adventurer's Guide.” 
+                        Between the half-rotten leather covers you see that it’s full of information about the different 
+                        kinds of beings that make up Faerun. Surely, there is something of value hidden inside 
+                        these pages… </p>
+                  
+                      <p>Click on the bookmarks above to browse the different categories!</p>
+                  
+                        <button id="close-modal-button">&times;</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="dataSection">
+                <div id="dataContainer"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </body>
 
 </html>

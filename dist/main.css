@@ -42,7 +42,11 @@ ul > button:focus {
 
 .applicationContainer {
   width: auto;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #titleContainer {
@@ -68,29 +72,28 @@ ul > button:focus {
   margin-right: auto;
 }
 
-#audio-button {
-  position: absolute;
-  top: 20px;
-  right: 10px;
+.periphery-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: fit-content;
-  text-align: center;
+  position: absolute;
+  top: 30px;
+  right: 20px;
 }
 
-#github-button {
-  position: absolute;
-  top: 10px;
-  right: 20px;
+.interactive-container {
   width: fit-content;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tabContainer {
   display: flex;
   gap: 20px;
-  margin-left: 200px;
-  margin-right: auto;
-  width: 570px;
-  padding: 5px;
+  width: fit-content;
+  padding-bottom: 5px;
   text-align: center;
   overflow: hidden;
 }
@@ -113,7 +116,7 @@ ul > button:focus {
 }
 
 .informationContainer {
-  border: 2px solid purple;
+  border: 5px solid rgb(72, 23, 14);
   border-radius: 20px;
   background-image: url("../assets/book.png");
   background-size: cover;
@@ -121,15 +124,14 @@ ul > button:focus {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 1250px;
-  flex-direction: row;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 #message {
-  border: 2px solid purple;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,10 +155,6 @@ ul > button:focus {
 }
 
 .visualSection {
-  border: 2px solid blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 500px;
   height: 590px;
   border-radius: 10px;
@@ -165,8 +163,8 @@ ul > button:focus {
 }
 
 #visualContainer {
-  border: 1px solid black;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 

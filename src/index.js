@@ -22,15 +22,17 @@ backgroundMusic.volume = 0.2;
 document.addEventListener("DOMContentLoaded", () => {
   const audioEle = document.getElementById('music');
   const audioButton = document.getElementById('audio-button');
-  const speakerIcon = document.getElementById('speakerIcon');
+  const speakerIcon = document.getElementById('speaker-icon');
 
   audioButton.addEventListener('click', () => {
     if (audioEle.paused) {
       audioEle.play();
-      speakerIcon.src = "./assets/speaker_icon.ico";
+      speakerIcon.classList.remove('fa-play');
+      speakerIcon.classList.add('fa-pause');
     } else {
       audioEle.pause();
-      speakerIcon.src = "./assets/muted_speaker_icon.ico";
+      speakerIcon.classList.remove('fa-pause');
+      speakerIcon.classList.add('fa-play');
     }
   });
 });
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeModal = document.getElementById('close-modal-button');
     const modalEle = document.getElementById("message");
 
-    modalEle.style.display = 'flex';
+    // modalEle.style.display = 'flex';
 
     openModal.addEventListener('click', () => {
       window.location.reload();
@@ -51,11 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
       modalEle.style.display = 'none';
     });
 
-    window.addEventListener('click', (ev) => {
-      if (ev.target !== openModal) {
-        modalEle.style.display = 'none';
-      }
-    });
+    // window.addEventListener('click', (ev) => {
+    //   if (ev.target !== openModal) {
+    //     modalEle.style.display = 'none';
+    //   }
+    // });
   });
 
 
