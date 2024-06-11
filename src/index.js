@@ -4,7 +4,7 @@ const { default: ClassRender} = require("./scripts/classRender");
 const { default: BackgroundRender} = require("./scripts/backgroundRender");
 const { default: FeatRender} = require("./scripts/featRender");
 const { default: WeaponRender} = require("./scripts/weaponsRender");
-const { default: MagicItemRender} = require("./scripts/magicItemRender");
+// const { default: MagicItemRender} = require("./scripts/magicItemRender");
 
 
 // document.addEventListener("DOMContentLoaded", () => {
@@ -126,21 +126,21 @@ const renderFeatInfo = async () => {
 
 window.renderFeatInfo =  renderFeatInfo;
 
-// document.addEventListener("DOMContentLoaded", () =>{
-//   const weaponsTab = document.getElementById("weapons-tab");
-//   weaponsTab.addEventListener('click', renderWeaponInfo);
-// });
+document.addEventListener("DOMContentLoaded", () =>{
+  const weaponsTab = document.getElementById("weapons-tab");
+  weaponsTab.addEventListener('click', renderWeaponInfo);
+});
 
-// const renderWeaponInfo = async () => {
-//   const response = await fetch ("https://api.open5e.com/v1/weapons/?document__slug__not_in=toh");
-//   if (response.ok) {
-//     const data = await response.json();
-//     console.log(data);
-//     new WeaponRender(data);
-//   }
-// };
+const renderWeaponInfo = async () => {
+  const response = await fetch ("https://api.open5e.com/v1/weapons/?document__slug__not_in=toh");
+  if (response.ok) {
+    const data = await response.json();
+    console.log(data);
+    new WeaponRender(data);
+  }
+};
 
-// window.renderWeaponInfo = renderWeaponInfo;
+window.renderWeaponInfo = renderWeaponInfo;
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const armorTab = document.getElementById("armor-tab");
