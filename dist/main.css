@@ -84,7 +84,6 @@ ul > button:focus {
 }
 
 .interactive-container {
-  border: 2px solid blue;
   width: fit-content;
   margin-top: auto;
   margin-bottom: auto;
