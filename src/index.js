@@ -1,20 +1,12 @@
 // const { default: Example } = require("./scripts/example");
-const { default: RaceRender} = require("./scripts/raceRender");
-const { default: ClassRender} = require("./scripts/classRender");
-const { default: BackgroundRender} = require("./scripts/backgroundRender");
-const { default: FeatRender} = require("./scripts/featRender");
-const { default: WeaponRender} = require("./scripts/weaponsRender");
+// const { default: RaceRender} = require("./scripts/raceRender");
+// const { default: ClassRender} = require("./scripts/classRender");
+import RaceRenderer from "./scripts/raceRender";
+import ClassRenderer from "./scripts/classRender";
+import BackgroundRenderer from "./scripts/backgroundRenderer";
+import FeatRenderer from "./scripts/featRenderer";
+import WeaponRenderer from "./scripts/weaponRenderer";
 // const { default: MagicItemRender} = require("./scripts/magicItemRender");
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const main = document.getElementById("main");
-//   new Example(main);
-//   // console.log("hello world");
-// });
-// document.addEventListener("DOMContentLoaded", () => {
-//   const raceName = document.getElementById("race")
-// })
 
 const backgroundMusic = document.getElementById("music");
 backgroundMusic.volume = 0.2;
@@ -64,35 +56,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 	 const raceTab = document.getElementById("race-tab");
-   raceTab.addEventListener('click', renderRaceInfo);
+   raceTab.addEventListener('click', async () => {
+    const response = await fetch("https://api.open5e.com/races/?document__slug__not_in=toh");
+    if (response.ok) {
+      const data = await response.json();
+      new RaceRenderer(data);
+    }
+   });
 });
-
-const renderRaceInfo = async () => {
-  const response = await fetch ("https://api.open5e.com/races/?document__slug__not_in=toh");
-  if (response.ok) {
-    const data = await response.json();
-
-    new RaceRender(data);
-  }
-};
-
-window.renderRaceInfo = renderRaceInfo;
 
 document.addEventListener("DOMContentLoaded", () => {
   const classTab = document.getElementById("class-tab");
-  classTab.addEventListener('click', renderClassInfo);
+  classTab.addEventListener('click', async () => {
+    const response = await fetch("https://api.open5e.com/classes/");
+    if (response.ok) {
+      const data = await response.json();
+      new ClassRenderer(data);
+    }
+  });
 });
-
-const renderClassInfo = async () => {
-  const response = await fetch ("https://api.open5e.com/classes/");
-  if (response.ok) {
-    const data = await response.json();
-
-    new ClassRender(data);
-  }
-};
-
-window.renderClassInfo = renderClassInfo;
 
 document.addEventListener("DOMContentLoaded", () => {
   const backgroundsTab = document.getElementById("backgrounds-tab");
