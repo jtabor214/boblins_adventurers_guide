@@ -6,7 +6,7 @@ class RaceRenderer extends BaseRenderer {
       containerClass:'raceNames',
       imagePrefix:'characters',
       imageType:'race',
-      displayFields: ['traits', 'vision'],
+      displayFields: ['desc', 'size', 'traits', 'vision'],
       gridColumns: 1
     });
   }
