@@ -1,8 +1,5 @@
-// const { default: Example } = require("./scripts/example");
-// const { default: RaceRender} = require("./scripts/raceRender");
-// const { default: ClassRender} = require("./scripts/classRender");
-import RaceRenderer from "./scripts/raceRender";
-import ClassRenderer from "./scripts/classRender";
+import RaceRenderer from "./scripts/raceRenderer";
+import ClassRenderer from "./scripts/classRenderer";
 import BackgroundRenderer from "./scripts/backgroundRenderer";
 import FeatRenderer from "./scripts/featRenderer";
 import WeaponRenderer from "./scripts/weaponRenderer";
