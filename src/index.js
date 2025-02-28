@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const featsTab = document.getElementById("feats-tab");
-  featsTab.addEventListener('click', async() => {
+  featsTab.addEventListener('click', async () => {
     const response = await fetch("https://api.open5e.com/v1/feats/");
     if (response.ok) {
       const data = await response.json();
@@ -95,21 +95,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () => {
   const weaponsTab = document.getElementById("weapons-tab");
-  weaponsTab.addEventListener('click', renderWeaponInfo);
+  weaponsTab.addEventListener('click', async () => {
+    const response = await fetch("https://api.open5e.com/v1/weapons/?document__slug__not_in=toh");
+    if (response.ok) {
+      const data = await response.json();
+      new WeaponRenderer(data);
+    }
+  });
 });
-
-const renderWeaponInfo = async () => {
-  const response = await fetch ("https://api.open5e.com/v1/weapons/?document__slug__not_in=toh");
-  if (response.ok) {
-    const data = await response.json();
-    console.log(data);
-    new WeaponRender(data);
-  }
-};
-
-window.renderWeaponInfo = renderWeaponInfo;
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const armorTab = document.getElementById("armor-tab");
