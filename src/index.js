@@ -75,19 +75,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const backgroundsTab = document.getElementById("backgrounds-tab");
-  backgroundsTab.addEventListener('click', renderBackgroundInfo);
+  backgroundsTab.addEventListener('click', async () => {
+    const response = await fetch("https://api.open5e.com/backgrounds/?document__slug__in=a5e");
+    if (response.ok) {
+      const data = await response.json();
+      new BackgroundRenderer(data);
+    }
+  });
 });
-
-const renderBackgroundInfo = async () => {
-  const response = await fetch ("https://api.open5e.com/backgrounds/?document__slug__in=a5e");
-  if (response.ok) {
-    const data = await response.json();
-
-    new BackgroundRender(data);
-  }
-};
-
-window.renderBackgroundInfo =  renderBackgroundInfo;
 
 document.addEventListener("DOMContentLoaded", () => {
   const featsTab = document.getElementById("feats-tab");
