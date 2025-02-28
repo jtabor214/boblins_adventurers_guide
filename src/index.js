@@ -86,19 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const featsTab = document.getElementById("feats-tab");
-  featsTab.addEventListener('click', renderFeatInfo);
+  featsTab.addEventListener('click', async() => {
+    const response = await fetch("https://api.open5e.com/v1/feats/");
+    if (response.ok) {
+      const data = await response.json();
+      new FeatRenderer(data);
+    }
+  });
 });
-
-const renderFeatInfo = async () => {
-  const response = await fetch ("https://api.open5e.com/v1/feats/");
-  if (response.ok) {
-    const data = await response.json();
-
-    new FeatRender(data);
-  }
-};
-
-window.renderFeatInfo =  renderFeatInfo;
 
 document.addEventListener("DOMContentLoaded", () =>{
   const weaponsTab = document.getElementById("weapons-tab");
