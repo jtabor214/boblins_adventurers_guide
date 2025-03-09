@@ -90,11 +90,6 @@ function setTabHandlers() {
   });
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const armorTab = document.getElementById("armor-tab");
-//   armorTab.addEventListener('click', renderArmorInfo);
-// });
-
 // const renderArmorInfo = async () => {
 //   const response = await fetch ("https://api.open5e.com/v1/armor/");
 //   if (response.ok) {
@@ -103,13 +98,6 @@ function setTabHandlers() {
 //     new ArmorRender(data);
 //   }
 // };
-
-// window.renderArmorInfo = renderArmorInfo;
-
-// document.addEventListener("DOMContentLoaded", () =>{
-//   const magicItemsTab = document.getElementById("magic-items-tab");
-//   magicItemsTab.addEventListener('click', renderItemInfo);
-// });
 
 // const renderItemInfo = async () => {
 //   const response = await fetch ("https://api.open5e.com/v1/magicitems/?document__slug__in=wotc-srd&ordering=rarity");
