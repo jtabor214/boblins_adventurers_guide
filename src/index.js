@@ -3,51 +3,6 @@ import ClassRenderer from "./scripts/classRenderer";
 import BackgroundRenderer from "./scripts/backgroundRenderer";
 import FeatRenderer from "./scripts/featRenderer";
 import WeaponRenderer from "./scripts/weaponRenderer";
-// const { default: MagicItemRender} = require("./scripts/magicItemRender");
-
-const backgroundMusic = document.getElementById("music");
-backgroundMusic.volume = 0.2;
-
-document.addEventListener("DOMContentLoaded", () => {
-  const audioEle = document.getElementById('music');
-  const audioButton = document.getElementById('audio-button');
-  const speakerIcon = document.getElementById('speaker-icon');
-
-  audioButton.addEventListener('click', () => {
-    if (audioEle.paused) {
-      audioEle.play();
-      speakerIcon.classList.remove('fa-play');
-      speakerIcon.classList.add('fa-pause');
-    } else {
-      audioEle.pause();
-      speakerIcon.classList.remove('fa-pause');
-      speakerIcon.classList.add('fa-play');
-    }
-  });
-});
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const openModal = document.getElementById('modal-tab');
-    const closeModal = document.getElementById('close-modal-button');
-    const modalEle = document.getElementById("message");
-
-    // modalEle.style.display = 'flex';
-
-    openModal.addEventListener('click', () => {
-      window.location.reload();
-      // modalEle.style.display = 'flex';
-    });
-
-    closeModal.addEventListener('click', () =>{
-      modalEle.style.display = 'none';
-    });
-
-    // window.addEventListener('click', (ev) => {
-    //   if (ev.target !== openModal) {
-    //     modalEle.style.display = 'none';
-    //   }
-    // });
-  });
 
 const TAB_CONFIG = {
 'raceTab': {
@@ -70,6 +25,15 @@ const TAB_CONFIG = {
   endpoint: 'https://api.open5e.com/v1/weapons/?document__slug__not_in=toh',
   renderer: WeaponRenderer 
 }};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const backgroundMusic = document.getElementById("music");
+  backgroundMusic.volume = 0.2;
+
+  setAudioControls();
+  setModal();
+  setTabHandlers();
+});
 
 function setTabHandlers() {
   Object.entries(TAB_CONFIG).forEach(([tabId, config]) => {
