@@ -54,6 +54,22 @@ function setAudioControls() {
   });
 }
 
+// modal controls
+function setModal() {
+  const openModal = document.getElementById('modal-tab');
+  const closeModal = document.getElementById('close-modal-button');
+  const modalEle = document.getElementById("message");
+
+  openModal.addEventListener('click', () => {
+    window.location.reload();
+  });
+
+  closeModal.addEventListener('click', () => {
+    modalEle.style.display = 'none';
+  });
+}
+
+// tab handlers
 function setTabHandlers() {
   Object.entries(TAB_CONFIG).forEach(([tabId, config]) => {
     const tabElement = document.getElementById(tabId);
