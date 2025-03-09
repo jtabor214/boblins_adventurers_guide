@@ -35,6 +35,25 @@ document.addEventListener("DOMContentLoaded", () => {
   setTabHandlers();
 });
 
+// audio player controls
+function setAudioControls() {
+  const audioEle = document.getElementById('music');
+  const audioButton = document.getElementById('audio-button');
+  const speakerIcon = document.getElementById('speaker-icon');
+
+  audioButton.addEventListener('click', () => {
+    if (audioEle.paused) {
+      audioEle.play();
+      speakerIcon.classList.remove('fa-play');
+      speakerIcon.classList.add('fa-pause');
+    } else {
+      audioEle.pause();
+      speakerIcon.classList.remove('fa-pause');
+      speakerIcon.classList.add('fa-play');
+    }
+  });
+}
+
 function setTabHandlers() {
   Object.entries(TAB_CONFIG).forEach(([tabId, config]) => {
     const tabElement = document.getElementById(tabId);
