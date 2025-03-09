@@ -49,62 +49,47 @@ document.addEventListener("DOMContentLoaded", () => {
     // });
   });
 
+const TAB_CONFIG = {
+'raceTab': {
+  endpoint: 'https://api.open5e.com/races/?document__slug__not_in=toh',
+  renderer: RaceRenderer
+},
+ 'classTab': {
+  endpoint: 'https://api.open5e.com/classes/',
+  renderer: ClassRenderer
+},
+'backgroundsTab': {
+  endpoint: 'https://api.open5e.com/backgrounds/?document__slug__in=a5e',
+  renderer: BackgroundRenderer
+},
+'featsTab': {
+  endpoint: 'https://api.open5e.com/v1/feats/',
+  renderer: FeatRenderer
+},
+'weaponsTab': {
+  endpoint: 'https://api.open5e.com/v1/weapons/?document__slug__not_in=toh',
+  renderer: WeaponRenderer 
+}};
 
+function setTabHandlers() {
+  Object.entries(TAB_CONFIG).forEach(([tabId, config]) => {
+    const tabElement = document.getElementById(tabId);
+    if (!tabElement) return;
 
-document.addEventListener("DOMContentLoaded", () => {
-	 const raceTab = document.getElementById("race-tab");
-   raceTab.addEventListener('click', async () => {
-    const response = await fetch("https://api.open5e.com/races/?document__slug__not_in=toh");
-    if (response.ok) {
-      const data = await response.json();
-      new RaceRenderer(data);
-    }
-   });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const classTab = document.getElementById("class-tab");
-  classTab.addEventListener('click', async () => {
-    const response = await fetch("https://api.open5e.com/classes/");
-    if (response.ok) {
-      const data = await response.json();
-      new ClassRenderer(data);
-    }
+    tabElement.addEventListener('click', async () => {
+      try {
+        const response = await fetch(config.endpoint);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        new config.renderer(data);
+      } catch (error) {
+        console.error(`Error loading data for ${tabId}:`, error);
+      }
+    });
   });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const backgroundsTab = document.getElementById("backgrounds-tab");
-  backgroundsTab.addEventListener('click', async () => {
-    const response = await fetch("https://api.open5e.com/backgrounds/?document__slug__in=a5e");
-    if (response.ok) {
-      const data = await response.json();
-      new BackgroundRenderer(data);
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const featsTab = document.getElementById("feats-tab");
-  featsTab.addEventListener('click', async () => {
-    const response = await fetch("https://api.open5e.com/v1/feats/");
-    if (response.ok) {
-      const data = await response.json();
-      new FeatRenderer(data);
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const weaponsTab = document.getElementById("weapons-tab");
-  weaponsTab.addEventListener('click', async () => {
-    const response = await fetch("https://api.open5e.com/v1/weapons/?document__slug__not_in=toh");
-    if (response.ok) {
-      const data = await response.json();
-      new WeaponRenderer(data);
-    }
-  });
-});
+}
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const armorTab = document.getElementById("armor-tab");
