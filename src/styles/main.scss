@@ -10,7 +10,7 @@ body {
   overflow: hidden;
 }
 
-button{
+button {
   cursor: url('../assets/sword_pointer.png'), auto;    
   font-family: customFont;
 }
@@ -19,11 +19,11 @@ div > button {
   transition: transform 0.3s ease;
 }
 
-div > button:hover{
+div > button:hover {
   transform: scale(1.1);
 }
 
-div > button:focus{
+div > button:focus {
   background-color: rgb(182,145,103);
 }
 
@@ -31,15 +31,15 @@ ul > button {
   transition: transform 0.3s ease;
 }
 
-ul > button:hover{
+ul > button:hover {
   transform: scale(1.1);
 }
 
-ul > button:focus{
+ul > button:focus {
   background-color: rgb(182,145,103);
 }
 
-.applicationContainer{
+.applicationContainer {
   // border: 2px solid red;
   width: auto;
   display: flex;
@@ -49,7 +49,7 @@ ul > button:focus{
   padding-right: 10px;
 }
     
-#titleContainer{
+#titleContainer {
   // border: 1px solid yellow;
   display: flex;
   justify-content: center;
@@ -85,7 +85,7 @@ ul > button:focus{
   right: 20px;
 }  
 
-.interactive-container{
+.interactive-container {
   // border: 2px solid blue;
   width: fit-content;
   margin-top: auto;
@@ -115,12 +115,11 @@ ul > button:focus{
   border-radius: 5px;
 }
     
-.tabContainer > button:hover{
+.tabContainer > button:hover {
   transform: translateY(3px);
   box-shadow: 0 5px 10pc rgba(0, 0, 0, 0.2);
 }
     
-
 .informationContainer {
   border: 5px solid rgb(72,23,14);
   border-radius: 20px;
@@ -161,7 +160,7 @@ ul > button:focus{
   cursor: pointer;
 }
     
-.visualSection{
+.visualSection {
   // border: 2px solid blue;
   width: 500px;
   height: 590px;
@@ -170,7 +169,7 @@ ul > button:focus{
   overflow: auto;
 }
     
-#visualContainer{
+#visualContainer {
   // border: 1px solid black;
   display: flex; 
   justify-content: center;
@@ -178,7 +177,7 @@ ul > button:focus{
 }
     
     
-.dataSection{
+.dataSection {
   // border: 1px solid black;
   width: 500px;
   height: 630px;
@@ -191,7 +190,7 @@ ul > button:focus{
   overflow: auto;
 }
     
-.raceNames{
+.raceNames {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,13 +209,13 @@ ul > button:focus{
   flex-direction: column;  
 }
 
-.race-image{
+.race-image {
   width: 300px;
   height: auto;
 }
 
     
-.classTitles{
+.classTitles {
   display: grid;
   margin-top: 20px;
   grid-template-columns: repeat(2, 1fr);
@@ -235,12 +234,12 @@ ul > button:focus{
   gap: 10px  
 }
 
-.class-image{
+.class-image {
   width: 50px;
   height: auto;
 }
     
-.backgroundTitles{
+.backgroundTitles {
   // border: 1px solid black;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -260,7 +259,7 @@ ul > button:focus{
   gap: 10px  
 }
 
-.background-image{
+.background-image {
   width: 40px;
   height: auto;
 }
@@ -275,7 +274,7 @@ ul > button:focus{
   padding: 0;
 }
     
-.weaponNames{
+.weaponNames {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -284,7 +283,7 @@ ul > button:focus{
   padding: 0;
 }
     
-.itemNames{
+.itemNames {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
@@ -293,7 +292,7 @@ ul > button:focus{
   padding: 0;
 }
     
-.name{
+.name {
   border: 1px solid rgb(72,23,14);
   border-radius: 10px;
   padding: 10px;
@@ -302,7 +301,7 @@ ul > button:focus{
   color: rgb(72,23,14);
 }
     
-.title{
+.title {
   border: 1px solid rgb(72,23,14);
   border-radius: 10px;
   padding: 10px;
