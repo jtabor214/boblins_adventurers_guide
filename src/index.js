@@ -2,28 +2,32 @@ import RaceRenderer from "./scripts/raceRenderer";
 import ClassRenderer from "./scripts/classRenderer";
 import BackgroundRenderer from "./scripts/backgroundRenderer";
 import FeatRenderer from "./scripts/featRenderer";
-import WeaponRenderer from "./scripts/weaponRenderer";
+import WeaponRenderer from "./scripts/weaponsRenderer";
 
 const TAB_CONFIG = {
-'raceTab': {
+'race-tab': {
   endpoint: 'https://api.open5e.com/races/?document__slug__not_in=toh',
   renderer: RaceRenderer
 },
- 'classTab': {
+ 'class-tab': {
   endpoint: 'https://api.open5e.com/classes/',
   renderer: ClassRenderer
 },
-'backgroundsTab': {
+'backgrounds-tab': {
   endpoint: 'https://api.open5e.com/backgrounds/?document__slug__in=a5e',
   renderer: BackgroundRenderer
 },
-'featsTab': {
+'feats-tab': {
   endpoint: 'https://api.open5e.com/v1/feats/',
   renderer: FeatRenderer
 },
-'weaponsTab': {
+'weapons-tab': {
   endpoint: 'https://api.open5e.com/v1/weapons/?document__slug__not_in=toh',
   renderer: WeaponRenderer 
+// 'magic-items-tab': {
+//   endpoint: 'https://api.open5e.com/v1/magicitems/?document__slug__in=wotc-srd&ordering=rarity',
+//   renderer: MagicItemRenderer
+// }
 }};
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -3,11 +3,10 @@
   src: url('../assets/fonts/DiaryOfAn8BitMage-lYDD.ttf');
 }
 
-
 body {
+  // border: 2px solid blue;
   background: url('../assets/forest_background.png');  
   background-size: cover;
-  overflow: hidden;
 }
 
 button {
@@ -44,9 +43,9 @@ ul > button:focus {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 1rem;
 }
     
 #titleContainer {
@@ -95,7 +94,7 @@ ul > button:focus {
 }
     
 .tabContainer {
-  // border: 2px solid red;
+  // border: 2px solid red;  
   button:active,
   button:focus{background-color: rgb(138,86,51);}
   display: flex;
@@ -176,7 +175,6 @@ ul > button:focus {
   align-items: center; 
 }
     
-    
 .dataSection {
   // border: 1px solid black;
   width: 500px;
@@ -213,8 +211,7 @@ ul > button:focus {
   width: 300px;
   height: auto;
 }
-
-    
+   
 .classTitles {
   display: grid;
   margin-top: 20px;
