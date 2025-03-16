@@ -14,29 +14,15 @@ button {
   cursor: url("../assets/sword_pointer.png"), auto;
   font-family: customFont;
 }
-
-div > button {
-  transition: transform 0.3s ease;
-}
-
-div > button:hover {
-  transform: scale(1.1);
-}
-
-div > button:focus {
+button:focus {
   background-color: rgb(182, 145, 103);
 }
 
-ul > button {
+ul > button, div > button {
   transition: transform 0.3s ease;
 }
-
-ul > button:hover {
+ul > button:hover, div > button:hover {
   transform: scale(1.1);
-}
-
-ul > button:focus {
-  background-color: rgb(182, 145, 103);
 }
 
 .applicationContainer {
@@ -84,10 +70,7 @@ ul > button:focus {
 
 .interactive-container {
   width: fit-content;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .tabContainer {
@@ -98,22 +81,19 @@ ul > button:focus {
   text-align: center;
   overflow: hidden;
 }
-.tabContainer button:active,
-.tabContainer button:focus {
-  background-color: rgb(138, 86, 51);
-}
-
-.tabContainer > button {
+.tabContainer button {
   transition: background-color 0.4s ease, border-color 0.3s ease;
   height: 30px;
   padding: 0.5rem;
   background-color: #ceb795;
   border-radius: 5px;
 }
-
-.tabContainer > button:hover {
+.tabContainer button:active, .tabContainer button:focus {
+  background-color: rgb(138, 86, 51);
+}
+.tabContainer button:hover {
   transform: translateY(3px);
-  box-shadow: 0 5px 10pc rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .informationContainer {
@@ -144,8 +124,7 @@ ul > button:focus {
   line-height: 2;
   text-align: center;
 }
-
-#message > h1 {
+#message h1 {
   margin: 0;
 }
 
@@ -181,6 +160,21 @@ ul > button:focus {
   overflow: auto;
 }
 
+.name, .title {
+  border: 1px solid rgb(72, 23, 14);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  background-color: #ceb795;
+  color: rgb(72, 23, 14);
+}
+
+.itemNames, .weaponNames, .featTitles, .backgroundTitles, .classTitles {
+  display: grid;
+  list-style: none;
+  text-align: center;
+}
+
 .raceNames {
   display: flex;
   flex-direction: column;
@@ -190,7 +184,6 @@ ul > button:focus {
   list-style: none;
   text-align: center;
 }
-
 .raceNames > div {
   height: 300px;
   width: 100px;
@@ -206,14 +199,10 @@ ul > button:focus {
 }
 
 .classTitles {
-  display: grid;
   margin-top: 20px;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
-  list-style: none;
-  text-align: center;
 }
-
 .classTitles > div {
   height: 50px;
   width: 120px;
@@ -230,14 +219,10 @@ ul > button:focus {
 }
 
 .backgroundTitles {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  list-style: none;
-  text-align: center;
   padding: 0;
 }
-
 .backgroundTitles > div {
   height: 70px;
   width: 190px;
@@ -254,46 +239,19 @@ ul > button:focus {
 }
 
 .featTitles {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  list-style: none;
-  text-align: center;
   padding: 0;
 }
 
 .weaponNames {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  list-style: none;
-  text-align: center;
   padding: 0;
 }
 
 .itemNames {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
-  list-style: none;
-  text-align: center;
   padding: 0;
-}
-
-.name {
-  border: 1px solid rgb(72, 23, 14);
-  border-radius: 10px;
-  padding: 10px;
-  margin: 0;
-  background-color: #ceb795;
-  color: rgb(72, 23, 14);
-}
-
-.title {
-  border: 1px solid rgb(72, 23, 14);
-  border-radius: 10px;
-  padding: 10px;
-  margin: 0;
-  background-color: #ceb795;
-  color: rgb(72, 23, 14);
 }

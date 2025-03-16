@@ -3,41 +3,47 @@
   src: url('../assets/fonts/DiaryOfAn8BitMage-lYDD.ttf');
 }
 
+// variable list
+$primary-color: rgb(72, 23, 14);
+$secondary-color: #ceb795;
+$accent-color: rgb(138, 86, 51);
+$highlight-color: rgb(182, 145, 103);
+$border-color: $primary-color;
+$font-family-main: customFont;
+
 body {
   // border: 2px solid blue;
   background: url('../assets/forest_background.png');  
   background-size: cover;
 }
 
+// basic button styles
 button {
   cursor: url('../assets/sword_pointer.png'), auto;    
-  font-family: customFont;
+  font-family: $font-family-main;
+  
+  &:focus {
+    background-color: $highlight-color;
+  }
+}
+
+%button-hover-effect {
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 div > button {
-  transition: transform 0.3s ease;
-}
-
-div > button:hover {
-  transform: scale(1.1);
-}
-
-div > button:focus {
-  background-color: rgb(182,145,103);
+  @extend %button-hover-effect;
 }
 
 ul > button {
-  transition: transform 0.3s ease;
+  @extend %button-hover-effect;
 }
 
-ul > button:hover {
-  transform: scale(1.1);
-}
-
-ul > button:focus {
-  background-color: rgb(182,145,103);
-}
-
+// layout containers
 .applicationContainer {
   // border: 2px solid red;
   width: auto;
@@ -47,7 +53,8 @@ ul > button:focus {
   overflow: hidden;
   padding: 1rem;
 }
-    
+
+// title section
 #titleContainer {
   // border: 1px solid yellow;
   display: flex;
@@ -65,14 +72,15 @@ ul > button:focus {
 #title {
   // border: 2px solid red;
   width: 500px;
-  font-family: customFont;
+  font-family: $font-family-main;
   text-align: center;
-  color: rgb(72,23,14);
+  color: $primary-color;
   margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
 }
-    
+
+// periphery buttons    
 .periphery-buttons {
   // border: 1px solid yellow;
   display: flex;
@@ -83,45 +91,48 @@ ul > button:focus {
   position: absolute;
   top: 30px;
   right: 20px;
-}  
+}
 
+// main container
 .interactive-container {
   // border: 2px solid blue;
   width: fit-content;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
-    
+
+// tab section
 .tabContainer {
   // border: 2px solid red;  
-  button:active,
-  button:focus{background-color: rgb(138,86,51);}
   display: flex;
   gap: 20px;
   width: fit-content;
   padding: 1rem;
   text-align: center;
   overflow: hidden;
-}
+  
+  button {
+    // border: 3px solid goldenrod;
+    transition: background-color 0.4s ease, border-color 0.3s ease;
+    height: 30px;
+    padding: .5rem;
+    background-color: $secondary-color;
+    border-radius: 5px;
     
-.tabContainer > button {
-  // border: 3px solid goldenrod;
-  transition: background-color 0.4s ease, border-color 0.3s ease;
-  height: 30px;
-  padding: .5rem;
-  background-color: #ceb795;
-  border-radius: 5px;
-}
+    &:active,
+    &:focus {
+      background-color: $accent-color;
+    }
     
-.tabContainer > button:hover {
-  transform: translateY(3px);
-  box-shadow: 0 5px 10pc rgba(0, 0, 0, 0.2);
+    &:hover {
+      transform: translateY(3px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
-    
+
+// main information container
 .informationContainer {
-  border: 5px solid rgb(72,23,14);
+  border: 5px solid $border-color;
   border-radius: 20px;
   background-image: url('../assets/book.png');
   background-size: cover;
@@ -136,6 +147,7 @@ ul > button:focus {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
+// modal styling
 #message {
   // border: 2px solid purple;
   display: flex;
@@ -144,22 +156,23 @@ ul > button:focus {
   align-items: center;
   width: 410px;
   height: 600px;
-  font-family: customFont;
-  color: rgb(72,23,14);
+  font-family: $font-family-main;
+  color: $primary-color;
   line-height: 2.0;
   text-align: center;
-}
-    
-#message > h1 {
-  margin: 0;
+  
+  h1 {
+    margin: 0;
+  }
 }
     
 #close-modal-button {
-  background-color: #ceb795;
+  background-color: $secondary-color;
   border-radius: 10px;
   cursor: pointer;
 }
-    
+
+// visuals section
 .visualSection {
   // border: 2px solid blue;
   width: 500px;
@@ -175,7 +188,8 @@ ul > button:focus {
   justify-content: center;
   align-items: center; 
 }
-    
+
+// data/api section    
 .dataSection {
   // border: 1px solid black;
   width: 500px;
@@ -183,12 +197,34 @@ ul > button:focus {
   margin-top: 10px;
   border-radius: 10px;
   box-sizing: border-box;
-  font-family: customFont;
-  color: rgb(72,23,14);
+  font-family: $font-family-main;
+  color: $primary-color;
   line-height: 1.5;
   overflow: auto;
 }
-    
+
+// button styles
+%button-style {
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+
+.name, .title {
+  @extend %button-style;
+}
+
+// layouts for different sections
+%grid-layout {
+  display: grid;
+  list-style: none;
+  text-align: center;
+}
+
+// race section
 .raceNames {
   display: flex;
   flex-direction: column;
@@ -197,115 +233,90 @@ ul > button:focus {
   gap: 60px;
   list-style: none;
   text-align: center;
-}
-    
-.raceNames > div {
-  height: 300px;
-  width: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;  
+  
+  > div {
+    height: 300px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .race-image {
   width: 300px;
   height: auto;
 }
-   
+
+// class section
 .classTitles {
-  display: grid;
+  @extend %grid-layout;
   margin-top: 20px;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
-  list-style: none;
-  text-align: center;
-}
-
-.classTitles > div {
-  height: 50px;
-  width: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px  
+  
+  > div {
+    height: 50px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .class-image {
   width: 50px;
   height: auto;
 }
-    
+
+// background section
 .backgroundTitles {
   // border: 1px solid black;
-  display: grid;
+  @extend %grid-layout;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  list-style: none;
-  text-align: center;
   padding: 0;
-}
-
-.backgroundTitles > div {
-  height: 70px;
-  width: 190px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px  
+  
+  > div {
+    height: 70px;
+    width: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .background-image {
   width: 40px;
   height: auto;
 }
-    
+
+// feat section
 .featTitles {
   // border: 1px solid black;
-  display: grid;
+  @extend %grid-layout;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  list-style: none;
-  text-align: center;
   padding: 0;
 }
-    
+
+// weapon section
 .weaponNames {
-  display: grid;
+  @extend %grid-layout;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  list-style: none;
-  text-align: center;
   padding: 0;
 }
-    
+
+// item section
 .itemNames {
-  display: grid;
+  @extend %grid-layout;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
-  list-style: none;
-  text-align: center;
   padding: 0;
 }
-    
-.name {
-  border: 1px solid rgb(72,23,14);
-  border-radius: 10px;
-  padding: 10px;
-  margin: 0;
-  background-color: #ceb795;
-  color: rgb(72,23,14);
-}
-    
-.title {
-  border: 1px solid rgb(72,23,14);
-  border-radius: 10px;
-  padding: 10px;
-  margin: 0;
-  background-color: #ceb795;
-  color: rgb(72,23,14);
-}
-    
-    
