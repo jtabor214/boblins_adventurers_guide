@@ -63,6 +63,7 @@ ul > button:focus {
 }
     
 #title {
+  // border: 2px solid red;
   width: 500px;
   font-family: customFont;
   text-align: center;
@@ -100,7 +101,7 @@ ul > button:focus {
   display: flex;
   gap: 20px;
   width: fit-content;
-  padding-bottom: 5px;
+  padding: 1rem;
   text-align: center;
   overflow: hidden;
 }
@@ -109,7 +110,7 @@ ul > button:focus {
   // border: 3px solid goldenrod;
   transition: background-color 0.4s ease, border-color 0.3s ease;
   height: 30px;
-  padding: 5px;
+  padding: .5rem;
   background-color: #ceb795;
   border-radius: 5px;
 }
